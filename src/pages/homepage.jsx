@@ -1,15 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faStackOverflow,
-	faInstagram,
-} from "@fortawesome/free-brands-svg-icons";
-
 import Logo from "../components/common/logo";
 import Footer from "../components/common/footer";
 import NavBar from "../components/common/navBar";
@@ -22,6 +13,7 @@ import SEO from "../data/seo";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
+import Stack from "../components/homepage/stack";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
@@ -100,7 +92,7 @@ const Homepage = () => {
 								</div>
 							</div>
 
-							<div className="homepage-first-area-right-side">
+							{/* <div className="homepage-first-area-right-side">
 								<div className="homepage-image-container">
 									<div className="homepage-image-wrapper">
 										<img
@@ -110,20 +102,10 @@ const Homepage = () => {
 										/>
 									</div>
 								</div>
-							</div>
+							</div> */}
 						</div>
-
+						{/* 
 						<div className="homepage-socials">
-							<a
-								href={INFO.socials.twitter}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faTwitter}
-									className="homepage-social-icon"
-								/>
-							</a>
 							<a
 								href={INFO.socials.github}
 								target="_blank"
@@ -134,38 +116,33 @@ const Homepage = () => {
 									className="homepage-social-icon"
 								/>
 							</a>
-							<a
-								href={INFO.socials.stackoverflow}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faStackOverflow}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={INFO.socials.instagram}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faInstagram}
-									className="homepage-social-icon"
-								/>
-							</a>
-							<a
-								href={`mailto:${INFO.main.email}`}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faMailBulk}
-									className="homepage-social-icon"
-								/>
-							</a>
+						</div> */}
+						<div className="homepage-technologies">
+							<div className="sub-header homepage-title">
+								{INFO.technology.title}
+							</div>
+							<div className="subtitle homepage-title">
+								{INFO.technology.description}
+							</div>
+							<div className="subtitle homepage-title">
+								FrontEnd
+							</div>
+							{INFO.technology.fonrtend.map((item, index) => {
+								return <Stack key={index} {...item}/>
+							})}
+							<div className="subtitle homepage-title">
+							BackEnd
+							</div>
+							{INFO.technology.backend.map((item, index) => {
+								return <Stack key={index} {...item}/>
+							})}
+							{/* <div className="subtitle homepage-title">
+								CI/CD
+							</div>
+								{INFO.technology.cicd.map((item, index) => {
+								return <Stack key={index} {...item}/>
+							})} */}
 						</div>
-
 						<div className="homepage-projects">
 							<AllProjects />
 						</div>
