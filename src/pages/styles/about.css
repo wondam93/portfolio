@@ -31,10 +31,13 @@
 
 .about-title {
 	width: 100% !important;
+	margin-bottom: 15px;
 }
 
 .about-subtitle {
 	width: 80% !important;
+	line-height: 22px;
+	font-size:14px;
 }
 
 .about-left-side {

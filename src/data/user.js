@@ -22,9 +22,9 @@ const INFO = {
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "안녕하세요, 정원담입니다. 서울, 한국에서 거주하고 있습니다.",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"안녕하세요! 저는 웹개발자 정원담입니다. 여행과 일은 제가 열정적인 것들 중에 하나입니다. 지구 여행을 하면서 나와 다른 삶에 대해서 이해하고 또 제가 가진것들의 소중함도 느낍니다. 일 끝나고는 집에서 공부하거나 쉬는 거나 스쿼시하면서 운동하는것을 좋아합니다. 앞으로는 더 많은 사람들과 함께 일하면서 배우고 성장하고 싶습니다. 저는 한 가지 일에만 집중하는 것도 중요하지만, 전체적인 시야를 가지고 두루두루 잘 바라보는 것도 중요하다고 생각합니다. 인공지능이 발전하면서 이러한 능력은 더욱 중요해질 것이라고 생각하며, 미래는 어떻게 바뀔지 모르지만, 항상 변화에 적응하고 발전할 수 있는 능력을 기르는 것이 중요하다고 믿습니다.",
 	},
 
 	articles: {
@@ -81,6 +81,10 @@ const INFO = {
 			description:"한국어와 영어 사용 가능합니다.",
 			maturity: "영어 70%, 영어로 의사소통 가능."
 		}]
+	},
+	project: {
+		title:"2016년부터 지금까지...",
+		description: "정말 아무것도 몰랐습니다. 특히 첫 회사가 미국 회사였다는 점, 전공도 컴퓨터이고 코드 비슷한것은 맞지긴 하나 내가 개발자인가 무엇인가 혼란이 있었던 시기였고 개발 더 배우기엔 인턴십을 시작한 회사에선 불가능 하다 생각하였습니다. 이런 이유로 한국으로 다시 돌아와 실력있는 사수들을 만나서 경험하고 덕분에 많이 성장 하였다고 생각합니다. javascript 개발부터 컴포넌트 개발 그렇게 쓰고 싶었던 프론트엔드 프레임웍까지, 이걸 경험하다보니 백엔드는 어떻게 돌아가는지 전체적인 데이터가 어떻게 흘러가서 처리하는지 궁금하였고 풀스택이라는 영역 까지 넘어오게 되었습니다. 저는 아직도 많이 배워야 하고 부족하다고 생각하지만 10년이 지나도 제가 똑같이 부족하다 생각할것이기 때문에 항상 배우고자하는 태도로 제 일을 바라보려고 합니다. 저와 다른 분야의 사람의 이야기, 그리고 페어 프로그래밍 코드리뷰도 좋아합니다.",
 	},
 	projects: [
 		{

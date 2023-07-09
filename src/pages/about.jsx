@@ -1,12 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-
+import {  useContext } from 'react';
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
 import Socials from "../components/about/socials";
-
+import { UserContext } from "../App";
 import INFO from "../data/user";
+import EnINFO from "../data/enUser"
 import SEO from "../data/seo";
 
 import "./styles/about.css";
@@ -17,7 +18,16 @@ const About = () => {
 	}, []);
 
 	const currentSEO = SEO.find((item) => item.page === "about");
-
+	const { lang, setLang } = useContext(UserContext);
+	const [text, setText] = useState(INFO);
+	useEffect(() => {
+		if(!lang){
+			setText(EnINFO)
+		} else {
+			setText(INFO)
+		}
+		setLang(lang)
+	}, [lang]);
 	return (
 		<React.Fragment>
 			<Helmet>
@@ -42,19 +52,17 @@ const About = () => {
 						<div className="about-main">
 							<div className="about-right-side">
 								<div className="title about-title">
-									{INFO.about.title}
+									{text.about.title}
 								</div>
-
 								<div className="desc about-subtitle">
-									{INFO.about.description}
+									{text.about.description}
 								</div>
 							</div>
-
 							<div className="about-left-side">
 								<div className="about-image-container">
 									<div className="about-image-wrapper">
 										<img
-											src="about.jpg"
+											src="IMG_8220.jpg"
 											alt="about"
 											className="about-image"
 										/>

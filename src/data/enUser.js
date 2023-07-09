@@ -22,9 +22,9 @@ const INFO = {
 	},
 
 	about: {
-		title: "I’m Tharindu N. I live in Sri Lanka, where I design the future.",
+		title: "Hello, I am Wondam Jung. I live in Seoul, South Korea.",
 		description:
-			"I've worked on a variety of projects over the years and I'm proud of the progress I've made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, please feel free to check out the code and suggest any improvements or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
+			"Hello! I'm web developer Wondam Jung. Traveling and work are among my passions. Traveling around the world allows me to understand different lifestyles and appreciate the value of what I have. After work, I enjoy studying or relaxing at home, and I also love playing squash for exercise. Moving forward, I aspire to work with more people, learn, and grow together. I believe that while it's important to focus on one thing, it's equally important to have a broad perspective and see things from different angles. With the advancement of artificial intelligence, I believe these skills will become even more crucial. Although we cannot predict how the future will change, I believe it's important to cultivate the ability to adapt and thrive in the face of change.",
 	},
 
 	articles: {
@@ -82,6 +82,10 @@ const INFO = {
 			maturity: "I am capable of using English, but I am not that fluent like a native speaker. "
 		}]
 	},
+	project: {
+		title:"From 2016 until now..",
+		description: "From 2016 until now, when I knew nothing at all. Considering the fact that my first job was at an American company, and my major was computer science with some knowledge of coding, I was confused about whether I was truly a developer or not. At the time, I thought it would be impossible to learn more development skills at the company where I started my internship. For these reasons, I returned to Korea and had the opportunity to meet experienced mentors. Thanks to them, I was able to gain a lot of growth and experience. From JavaScript development to component development and the frontend frameworks I wanted to use, as I gained experience in these areas, I became curious about how the backend works and how data flows and is processed in the overall system. This led me to transition into the full-stack domain. I still have a lot to learn and I believe I have many shortcomings, but even after 10 years, I would be the same, I would still have shortcomings in terms of developement with something. Therefore, I always approach my work with a desire to learn. I enjoy hearing stories from people in different fields and engaging in pair programming and code reviews.",
+	},
 	projects: [
 		{
 			title: "Development of custom size feature for vcat banners (2023)",
@@ -92,7 +96,7 @@ const INFO = {
 			link: "https://vcat.ai/",
 		},
 		{
-			title: "Development of the vcat banner production service Editor (2023))",
+			title: "Development of the vcat banner production service Editor (2023)",
 			description:
 				"We initially started with a Proof of Concept (POC) set up by my mentor, and then I took the lead in development using React, Zustand, and a library called daybrush, which serves as the main editor for our project.",
 			logo: "./pion.png",
