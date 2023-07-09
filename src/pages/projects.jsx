@@ -1,14 +1,14 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-
+import {  useContext } from 'react';
 import NavBar from "../components/common/navBar";
 import Footer from "../components/common/footer";
 import Logo from "../components/common/logo";
+import { UserContext } from "../App";
 import AllProjects from "../components/projects/allProjects";
-
-import INFO from "../data/user";
 import SEO from "../data/seo";
-
+import INFO from "../data/user";
+import EnINFO from "../data/enUser"
 import "./styles/projects.css";
 
 const Projects = () => {
@@ -17,6 +17,16 @@ const Projects = () => {
 	}, []);
 
 	const currentSEO = SEO.find((item) => item.page === "projects");
+	const { lang, setLang } = useContext(UserContext);
+	const [text, setText] = useState(INFO);
+	useEffect(() => {
+		if(!lang){
+			setText(EnINFO)
+		} else {
+			setText(INFO)
+		}
+		setLang(lang)
+	}, [lang]);
 
 	return (
 		<React.Fragment>
@@ -57,7 +67,7 @@ const Projects = () => {
 						</div>
 
 						<div className="projects-list">
-							<AllProjects />
+							<AllProjects projects={text.projects}/>
 						</div>
 					</div>
 					<div className="page-footer">

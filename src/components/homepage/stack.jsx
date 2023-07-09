@@ -9,7 +9,7 @@ const Stack = (props) => {
 			<div className="homepage-stack">
 				<div className="homepage-stack-content">
 					<div className="homepage-stack-date">
-						성숙도: {maturity}
+					 {maturity}
 					</div>
 					<div className="homepage-stack-title">{title}</div>
 					<div className="homepage-stack-description">

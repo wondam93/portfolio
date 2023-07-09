@@ -3,7 +3,7 @@ const INFO = {
 		title: "Portfolio by wondam",
 		name: "Wondam Jung",
 		email: "wondam93@gmail.com",
-		logo: "../logo.png",
+		logo: "../loopy.jpeg",
 	},
 
 	socials: {
@@ -34,10 +34,10 @@ const INFO = {
 	},
 	technology: {
 		title: "기술 스택",
-		description:"대시보드 개발부터 에디터 개발 까지 프론트 엔드 개발 경험이 더 많지만 현 회사에서 백엔드도 틈틈히 하고있고 MSA 와 백엔드 전체적이 아키텍쳐를 파악을 위해 공부 중에 있습니다.",
+		description:"대시보드 개발부터 에디터 개발 까지 프론트 엔드 개발 경험이 더 많지만 현 회사에서 백엔드도 틈틈히 하고있고 MSA 와 백엔드 전체적인 아키텍쳐를 파악을 위해 공부 중에 있습니다.",
 		fonrtend:[{
 			title: "Typescript / Javascript / JQuery",
-			description: "any 박지 말고 타입 명확하게 지정하겨 코드도 명확해 지게 합니다. jQuery 는 현재는 거의 쓰지 않지만 이전 회사에서 자주 썼었습니다.",
+			description: "any로 박지 않고 타입 명확하게 지정하여 코드도 명확해 지게 합니다. jQuery 는 현재는 거의 쓰지 않지만 이전 회사에서 자주 썼었습니다.",
 			maturity: "90%"
 		},
 		{
@@ -47,7 +47,7 @@ const INFO = {
 		},
 		{
 			title: "Html, SCSS/SASS, Tailwind, Element ui, Pal.js, MUI",
-			description: "마크업 부터 배워왔기 떄문에 가능하며 현 회사는 MUI를 사용하고 있습니다. 기술된 내용을 모두 써보았지만 모르는 부분은 이 역시 찾아보면서 개발 합니다.",
+			description: "현 회사는 MUI를 사용하고 있습니다. 기술된 내용을 모두 써보았고 문서보면서 개발 합니다.",
 			maturity: "90%"
 		},
 		{
@@ -57,7 +57,7 @@ const INFO = {
 		}],
 		backend:[{
 			title: "JAVA, Spring boot",
-			description: "현 회사에서 JAVA, Spring boot를 사용 중입니다. 백엔드 개발을 이 언어와 프레임워크로 가장 많이 해 보았습니다.",
+			description: "현 회사에서 JAVA, Spring boot를 사용 중입니다. 백엔드 개발을 이 언어와 프레임워크로 가장 많이 해 보았습니다. Security, Spring Cloud 공부 중에 있습니다.",
 			maturity: "70%"
 		},
 		{
@@ -72,58 +72,89 @@ const INFO = {
 		},
 		],
 		cicd:[{
-			title: "pioncorp",
-			description:"",
+			title: "Jenkins, Gihub Action",
+			description:"현 회사에서 Github Action 사용, 이전 회사에서 Jenkins 사용. 배포 파이프라인은 직접 구축한것이 아님.",
+			maturity: "60%"
 		}],
 		etc:[{
-			title: "pioncorp",
-			description:"",
+			title: "한국어와 영어",
+			description:"한국어와 영어 사용 가능합니다.",
+			maturity: "영어 70%, 영어로 의사소통 가능."
 		}]
 	},
 	projects: [
 		{
-			title: "Project 1",
+			title: "vcat 배너 커스텀 사이즈 기능 개발(2023)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"사용자가 입력한 width * height 로 배너이미지가 생성(Resize) 될 수 있게 개발 중 입니다. Front 는 React와 zustand, Backend는 Java, Spring boot 입니다.",
+			logo: "./pion.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://vcat.ai/",
+		},
+		{
+			title: "vcat 배너 제작 서비스 Editor 개발(2023)",
+			description:
+				"초반에 사수님이 셋업해주신 POC로 시작. 이후에 다시 React와 zustand, 에디터 메인이되는 daybrush 라는 라이브러리를 통해서 주도적으로 개발 하였습니다.",
+			logo: "./pion.png",
+			linkText: "View Project",
+			link: "https://vcat.ai/",
+		},
+		{
+			title: "vcat 배너 템플릿 관리(2022/2023)",
+			description:
+				"배너 템플릿 등록 및 관리하는 어드민 Front/Backend 개발. 뿐만 아니라 vcat 기능 업데이트 이후 admin 도 이에 맞게 업데이트 하는 일을 하였습니다.",
+			logo: "./pion.png",
+			linkText: "View Project",
+			link: "https://record.vcat.ai/login",
+		},
+		{
+			title: "Nielsen(닐슨) 시각화 대시보드 개발 (2021, 2022)",
+			description:
+				"빅데이터를 시각화하여 구현하는, 닐슨 기업용 대시보드 개발 프로젝트에 참여했습니다. Front는 React, zustand, SWR, Typescript 으로 개발 하였고 Backend는 코틀린, 스프링, mysql 으로 개발하였습니다. ",
+			logo: "./surmmerce.png",
+			linkText: "View Project",
+			link: "https://accelerator-ph.etrendview.com/auth/login",
 		},
 
 		{
-			title: "Project 2",
+			title: "TrendView 대시보드 플랫폼 개발(2020)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/python/python.png",
+				"시각화 대시보드 플랫폼입니다. JSON 데이터를 어떻게 구성하느냐에 따라 화면의 테마, 필터의 구조, 차트의 구조가 달라집니다. Front 개발을 위주로 Vue.js, vuex, Typescript를 사용하였습니다.",
+			logo: "./surmmerce.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://nielsen_nebula.marketingtool.co.kr/login",
 		},
-
 		{
-			title: "Project 3",
+			title: "TrendView 대시보드 어드민 개발(2021)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/html/html.png",
+				"트렌드뷰 대시보드 플랫폼 관리자를 위한 에디팅 서비스입니다. 관리자는 개발자의 도움없이 어드민 화면을 통해 필터, 차트, 권한설정 등 전반적인 수정을 할 수 있습니다.",
+			logo: "./surmmerce.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://trendview.kr/trendview/",
 		},
-
 		{
-			title: "Project 4",
+			title: "커스텀 골프 클럽 개발(2019)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"쇼핑몰에 제한된 스큐와 제한된 옵션으로만 리스팅 할 수 있어 좀 더 여러개의 옵션과 여러 스큐를 제공하기 위한 기능이 필요하였습니다. 이에 골프 클럽을 손님 요구에 맞게 여러가지 옵션을 넣을수 있게하고 선택한 옵션에 따른 클럽을 시각화하여 보여줄수 있게 개발. Jquery, Node.js, API는 헤로쿠로 배포 하였습니다.",
+			logo: "./golfio.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://www.golfio.com/custom/",
 		},
-
 		{
-			title: "Project 5",
+			title: "Samsungpart 개발 (2018)",
 			description:
-				"Lorem ipsum dolor sit amet. Et incidunt voluptatem ex tempore repellendus qui dicta nemo sit deleniti minima.",
-			logo: "https://cdn.jsdelivr.net/npm/programming-languages-logos/src/javascript/javascript.png",
+				"부품의 전체 파일은 SVG파일로 사용해 이미지 파일을 드래그할수있는 기능과 ZOOM IN, ZOOM OUT 등, 사용자와의 상호작용 요소들을 개발 하였습니다.",
+			logo: "./golfio.png",
 			linkText: "View Project",
-			link: "https://github.com",
+			link: "https://samsungparts.com/",
+		},
+		{
+			title: "golfio.com 사이트 개발, 유지 보수 및 책임(2015,2019)",
+			description:
+				"인턴으로 시작해 해당 사이트 전체 책임자로서 페이지 퍼블리싱(리뉴얼), 필요한 UI 개발부터, 기능구현 담당",
+			logo: "./golfio.png",
+			linkText: "View Project",
+			link: "https://www.golfio.com/",
 		},
 	],
 };

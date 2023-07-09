@@ -13,23 +13,23 @@
 
 .homepage-stack-date {
 	opacity: 1;
-	color: var(--tertiary-color);
+	color: var(--secondary-color);
 	font-size: 12px;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.3em;
 }
 
 .homepage-stack-title {
 	opacity: 1;
 	color: var(--primary-color);
 	font-size: 16px;
-	margin-bottom: 0.5em;
+	margin-bottom: 0.3em;
 	font-weight: 700;
 }
 
 .homepage-stack-description {
     opacity: 1;
     color: var(--secondary-color);
-    font-size: 12px;
+    font-size: 13px;
     line-height: 1.5;
 }
 

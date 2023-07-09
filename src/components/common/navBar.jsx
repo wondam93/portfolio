@@ -1,11 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import {  useContext } from 'react';
 import "./styles/navBar.css";
+import { UserContext } from "../../App";
 
 const NavBar = (props) => {
 	const { active } = props;
-
+	const { lang, setLang } = useContext(UserContext);
+	const handleToggle = () => {
+		setLang(!lang)
+	}
+	const style = {
+		on: {
+			color: "black",
+			border: "1px solid rgb(226, 226, 226)",
+			borderRadius: "10px",
+		},
+		off: {
+			color: "black",
+			border: "1px solid rgb(226, 226, 226)",
+			borderRadius: "10px",
+		}
+	  };
 	return (
 		<React.Fragment>
 			<div className="nav-container">
@@ -56,6 +72,9 @@ const NavBar = (props) => {
 								}
 							>
 								<Link to="/contact">Contact</Link>
+							</li>
+							<li>
+								<button onClick={handleToggle} style={lang ? style.on : style.off}>{lang ? 'Ko' : 'En'}</button>
 							</li>
 						</ul>
 					</div>

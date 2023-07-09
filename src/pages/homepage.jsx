@@ -7,22 +7,35 @@ import NavBar from "../components/common/navBar";
 import Article from "../components/homepage/article";
 import Works from "../components/homepage/works";
 import AllProjects from "../components/projects/allProjects";
-
+import { UserContext } from "../App";
 import INFO from "../data/user";
+import EnINFO from "../data/enUser"
 import SEO from "../data/seo";
 import myArticles from "../data/articles";
-
+import {  useContext } from 'react';
 import "./styles/homepage.css";
 import Stack from "../components/homepage/stack";
+import Education from "../components/homepage/education";
 
 const Homepage = () => {
 	const [stayLogo, setStayLogo] = useState(false);
 	const [logoSize, setLogoSize] = useState(80);
 	const [oldLogoSize, setOldLogoSize] = useState(80);
 
+	const { lang, setLang } = useContext(UserContext);
+	const [text, setText] = useState(INFO);
+	useEffect(() => {
+		if(!lang){
+			setText(EnINFO)
+		} else {
+			setText(INFO)
+		}
+		setLang(lang)
+	}, [lang]);
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
-	}, []);
+	}, [])
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -62,8 +75,10 @@ const Homepage = () => {
 
 	return (
 		<React.Fragment>
-			<Helmet>
-				<title>{INFO.main.title}</title>
+			{text && 
+			<>
+				<Helmet>
+				<title>{text.main.title}</title>
 				<meta name="description" content={currentSEO.description} />
 				<meta
 					name="keywords"
@@ -84,98 +99,54 @@ const Homepage = () => {
 						<div className="homepage-first-area">
 							<div className="homepage-first-area-left-side">
 								<div className="title homepage-title">
-									{INFO.homepage.title}
+									{text.homepage.title}
 								</div>
 
 								<div className="subtitle homepage-subtitle">
-									{INFO.homepage.description}
+									{text.homepage.description}
 								</div>
 							</div>
-
-							{/* <div className="homepage-first-area-right-side">
-								<div className="homepage-image-container">
-									<div className="homepage-image-wrapper">
-										<img
-											src="homepage.jpg"
-											alt="about"
-											className="homepage-image"
-										/>
-									</div>
-								</div>
-							</div> */}
 						</div>
-						{/* 
-						<div className="homepage-socials">
-							<a
-								href={INFO.socials.github}
-								target="_blank"
-								rel="noreferrer"
-							>
-								<FontAwesomeIcon
-									icon={faGithub}
-									className="homepage-social-icon"
-								/>
-							</a>
-						</div> */}
-						<div className="homepage-technologies">
+						 <div className="homepage-technologies">
 							<div className="sub-header homepage-title">
-								{INFO.technology.title}
+								{text.technology.title}
 							</div>
 							<div className="subtitle homepage-title">
-								{INFO.technology.description}
+								{text.technology.description}
 							</div>
+							<div className="subtitle homepage-title">FrontEnd</div>
+							{text.technology.fonrtend.map((item, index) =>  <Stack key={index} {...item}/>)}
+							<div className="subtitle homepage-title">BackEnd</div>
+							{text.technology.backend.map((item, index) => <Stack key={index} {...item}/>)}
 							<div className="subtitle homepage-title">
-								FrontEnd
-							</div>
-							{INFO.technology.fonrtend.map((item, index) => {
-								return <Stack key={index} {...item}/>
-							})}
-							<div className="subtitle homepage-title">
-							BackEnd
-							</div>
-							{INFO.technology.backend.map((item, index) => {
-								return <Stack key={index} {...item}/>
-							})}
-							{/* <div className="subtitle homepage-title">
 								CI/CD
 							</div>
-								{INFO.technology.cicd.map((item, index) => {
-								return <Stack key={index} {...item}/>
-							})} */}
-						</div>
+								{text.technology.cicd.map((item, index) => <Stack key={index} {...item}/>)}
+							<div className="subtitle homepage-title">
+								Languages
+							</div>
+								{text.technology.etc.map((item, index) => <Stack key={index} {...item}/>)}
+						</div>	
 						<div className="homepage-projects">
-							<AllProjects />
+							<AllProjects projects={text.projects}/>
 						</div>
-
 						<div className="homepage-after-title">
-							<div className="homepage-articles">
-								{myArticles.map((article, index) => (
-									<div
-										className="homepage-article"
-										key={(index + 1).toString()}
-									>
-										<Article
-											key={(index + 1).toString()}
-											date={article().date}
-											title={article().title}
-											description={article().description}
-											link={"/article/" + (index + 1)}
-										/>
-									</div>
-								))}
-							</div>
-
 							<div className="homepage-works">
-								<Works />
+								<Education education={text.education}/>
+							</div>
+							<div className="homepage-works">
+								<Works works={text.works}/>
 							</div>
 						</div>
-
 						<div className="page-footer">
 							<Footer />
 						</div>
 					</div>
 				</div>
 			</div>
+			</>
+			}
+
 		</React.Fragment>
 	);
 };
